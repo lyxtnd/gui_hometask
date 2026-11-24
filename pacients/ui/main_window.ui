@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #F5F4F0;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="table_pacients">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>921</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+      <pointsize>19</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget {
+    background-color: #FDFDF5;
+    alternate-background-color: #F1F5FC;
+    gridline-color: #D5DDF0;
+    border: 2px solid #DCE3EC;
+    border-radius: 8px;
+}
+
+QHeaderView::section {
+    background-color: #24345C;
+    color: #FDFDF5;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 13pt;
+}</string>
+    </property>
+    <property name="columnCount">
+     <number>6</number>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>20</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>152</number>
+    </attribute>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>true</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>ФИО</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Возраст</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Пол</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Рост</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Вес </string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ИМТ</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_title">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>791</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+      <pointsize>50</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #24345C;</string>
+    </property>
+    <property name="text">
+     <string>Таблица пациентов</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_count">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>791</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+      <pointsize>30</pointsize>
+      <italic>true</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #24345C;</string>
+    </property>
+    <property name="text">
+     <string>Всего пациентов: </string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>470</y>
+      <width>464</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="buttuns">
+     <item>
+      <widget class="QPushButton" name="btn_add_pacient">
+       <property name="font">
+        <font>
+         <family>Futura</family>
+         <pointsize>-1</pointsize>
+         <fontweight>DemiBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #EAF3B2;
+    color: rgb(57, 104, 68);
+    border: 1px solid #D4E384;
+    border-radius: 22px;
+    min-height: 44px;
+    max-height: 44px;
+    padding-left: 18px;
+    padding-right: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #DCE994;
+    color: #1E2B47;
+    border: 1px solid #C2D468;
+}
+
+QPushButton:pressed {
+    background-color: #CCE072;
+    color: #182238;
+    border: 1px solid #B0C952;
+}</string>
+       </property>
+       <property name="text">
+        <string>Добавить</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icons/add.png</normaloff>icons/add.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_edit_pacient">
+       <property name="font">
+        <font>
+         <family>Futura</family>
+         <pointsize>-1</pointsize>
+         <italic>false</italic>
+         <fontweight>DemiBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #9FBAF1;
+    color: #1E2F54;
+    border: 1px solid #86A7EC;
+    border-radius: 22px;
+    min-height: 44px;
+    max-height: 44px;
+    padding-left: 18px;
+    padding-right: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #DCE994;
+    color: #162340;
+    border: 1px solid #C5D66D;
+}
+
+QPushButton:pressed {
+    background-color: #6D92E3;
+    color: #FDFDF5;
+    border: 1px solid #587ED4;
+}</string>
+       </property>
+       <property name="text">
+        <string>Изменить</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icons/edit.png</normaloff>icons/edit.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+Z, Ctrl+Z</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_statistics">
+       <property name="font">
+        <font>
+         <family>Futura</family>
+         <pointsize>-1</pointsize>
+         <fontweight>DemiBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #C0B9DD;
+    color: #231F3A;
+    border: 1px solid #A69DCE;
+    border-radius: 22px;
+    min-height: 44px;
+    max-height: 44px;
+    padding-left: 18px;
+    padding-right: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #9488C4;
+    color: #FDFDF5;
+    border: 1px solid #7E71B5;
+}
+
+QPushButton:pressed {
+    background-color: #6D92E3;
+    color: #FDFDF5;
+    border: 1px solid #587ED4;
+}</string>
+       </property>
+       <property name="text">
+        <string>Статистика</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icons/bar-chart.png</normaloff>icons/bar-chart.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>389</width>
+    <height>530</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #F5F4F0;</string>
+  </property>
+  <widget class="QPushButton" name="btn_save">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>470</y>
+     <width>137</width>
+     <height>46</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>-1</pointsize>
+     <fontweight>DemiBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #EAF3B2;
+    color: rgb(40, 55, 88);
+    border: 1px solid #D4E384;
+    border-radius: 22px;
+    min-height: 44px;
+    max-height: 44px;
+    padding-left: 18px;
+    padding-right: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #DCE994;
+    color: #1E2B47;
+    border: 1px solid #C2D468;
+}
+
+QPushButton:pressed {
+    background-color: #CCE072;
+    color: #182238;
+    border: 1px solid #B0C952;
+}</string>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/save.png</normaloff>icons/save.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cancel">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>470</y>
+     <width>117</width>
+     <height>46</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>-1</pointsize>
+     <fontweight>DemiBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #F6D8D8;
+    color: #5C2323;
+    border: 1px solid #E5B6B6;
+    border-radius: 22px;
+    min-height: 44px;
+    max-height: 44px;
+    padding-left: 18px;
+    padding-right: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #EBC0C0;
+    color: #471818;
+    border: 1px solid #D99E9E;
+}
+
+QPushButton:pressed {
+    background-color: #D99B9B;
+    color: #FDFDF5;
+    border: 1px solid #C47E7E;
+}</string>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/cancel.png</normaloff>icons/cancel.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name_6">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>18</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #24345C;</string>
+   </property>
+   <property name="text">
+    <string>Добавление/редактирование пациента</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>70</y>
+     <width>291</width>
+     <height>392</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_name">
+      <property name="font">
+       <font>
+        <family>Futura</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #24345C;</string>
+      </property>
+      <property name="text">
+       <string>ФИО:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="edit_name">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #FDFDF5;
+    color: #1E293B;
+    border: 1px solid #C7D4EE;
+    border-radius: 10px;
+    min-height: 36px;
+    max-height: 36px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 13px;
+}
+
+QLineEdit:hover {
+    border: 1px solid #9FBAF1;
+}
+
+QLineEdit:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #3D568F;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_name_2">
+      <property name="font">
+       <font>
+        <family>Futura</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #24345C;</string>
+      </property>
+      <property name="text">
+       <string>Возраст:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="spin_age">
+      <property name="styleSheet">
+       <string notr="true">QSpinBox {
+    background-color: #FDFDF5;
+    color: #1E293B;
+    border: 1px solid #C7D4EE;
+    border-radius: 10px;
+    min-height: 36px;
+    max-height: 36px;
+    padding-left: 10px;
+    padding-right: 6px;
+    font-size: 13px;
+}
+
+
+QSpinBox:hover {
+    border: 1px solid #9FBAF1;
+}
+
+
+QSpinBox:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #3D568F;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #EAF3B2;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_name_3">
+      <property name="font">
+       <font>
+        <family>Futura</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #24345C;</string>
+      </property>
+      <property name="text">
+       <string>Пол:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="combo_gender">
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    background-color: #FDFDF5;
+    color: #1E293B;
+    border: 1px solid #C7D4EE;
+    border-radius: 10px;
+    min-height: 36px;
+    max-height: 36px;
+    padding-left: 12px;
+    padding-right: 10px;
+    font-size: 13px;
+}
+
+QComboBox:hover {
+    border: 1px solid #9FBAF1;
+}
+
+QComboBox:focus,
+QComboBox:on {
+    background-color: #FFFFFF;
+    border: 2px solid #3D568F;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 24px;
+    border: none;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FDFDF5;
+    color: #1E293B;
+    border: 1px solid #9FBAF1;
+    border-radius: 8px;
+    selection-background-color: #9FBAF1;
+    selection-color: #1E2F54;
+    padding: 4px;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Мужской</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Женский</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Неопределен</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_name_4">
+      <property name="font">
+       <font>
+        <family>Futura</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #24345C;</string>
+      </property>
+      <property name="text">
+       <string>Рост (м):</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDoubleSpinBox" name="spin_height">
+      <property name="styleSheet">
+       <string notr="true">QDoubleSpinBox {
+    background-color: #FDFDF5;
+    color: #1E293B;
+    border: 1px solid #C7D4EE;
+    border-radius: 10px;
+    min-height: 36px;
+    max-height: 36px;
+    padding-left: 10px;
+    padding-right: 6px;
+    font-size: 13px;
+}
+
+
+QDoubleSpinBox:hover {
+    border: 1px solid #9FBAF1;
+}
+
+
+QDoubleSpinBox:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #3D568F;
+}
+
+
+QDoubleSpinBox::up-button:hover,
+QDoubleSpinBox::down-button:hover {
+    background-color: #EAF3B2;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_name_5">
+      <property name="font">
+       <font>
+        <family>Futura</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #24345C;</string>
+      </property>
+      <property name="text">
+       <string>Вес (кг):</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDoubleSpinBox" name="spin_weight">
+      <property name="styleSheet">
+       <string notr="true">QDoubleSpinBox {
+    background-color: #FDFDF5;
+    color: #1E293B;
+    border: 1px solid #C7D4EE;
+    border-radius: 10px;
+    min-height: 36px;
+    max-height: 36px;
+    padding-left: 10px;
+    padding-right: 6px;
+    font-size: 13px;
+}
+
+
+QDoubleSpinBox:hover {
+    border: 1px solid #9FBAF1;
+}
+
+
+QDoubleSpinBox:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #3D568F;
+}
+
+QDoubleSpinBox::up-button:hover,
+QDoubleSpinBox::down-button:hover {
+    background-color: #EAF3B2;
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
