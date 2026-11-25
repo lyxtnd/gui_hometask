@@ -37,8 +37,6 @@ GUI/
 └── README.md
 ```
 
-> Названия файлов и папок внутри `Patients` и `Calculator` могут отличаться от указанных — ориентируйтесь на фактическое содержимое репозитория. Главное — чтобы папки, которые импортирует код (`generated`, `data`) и файл `manager.py`, лежали рядом с главным файлом приложения.
-
 ## Требования
 
 - **Python 3.10 или новее**
@@ -52,7 +50,7 @@ GUI/
 
 ```bash
 git clone https://github.com/lyxtnd/gui_hometask
-cd GUI
+cd gui_hometask
 ```
 
 ### 2. Создайте виртуальное окружение
@@ -111,20 +109,16 @@ python -c "import PySide6, matplotlib, faker; print('Всё установлен
 ### Patients
 
 ```bash
-cd Patients
+cd patients
 python main.py
 ```
 
 ### Calculator
 
 ```bash
-cd Calculator
+cd calculator
 python calculator.py
 ```
-
-> Замените `main.py` и `calculator.py` на реальные имена файлов, если они у вас другие.
-
-**Права на выполнение (Linux/macOS).** Отдельно выдавать права `chmod +x` не нужно: файлы запускаются через интерпретатор (`python файл.py`), а для этого достаточно прав на чтение. Права понадобились бы, только если запускать файл напрямую как `./main.py`.
 
 ### Выход из окружения
 

@@ -21,7 +21,6 @@ class StatisticsDialog(QDialog):
 
         self.patients = patients
 
-        # Единая цветовая палитра под интерфейс (крем, глубокий синий, голубой, лайм, лаванда)
         self.bg_color = "#FDFDF5"
         self.text_color = "#24345C"
         self.grid_color = "#DCE5F7"
@@ -60,7 +59,7 @@ class StatisticsDialog(QDialog):
         layout.addWidget(canvas)
 
     def _style_axes(self, ax, title: str, xlabel: str = "", ylabel: str = "", grid: bool = True):
-        """Применяет единый аккуратный стиль к осям графика."""
+        """Применяет единый стиль к осям графика."""
         ax.set_facecolor(self.bg_color)
         ax.set_title(title, color=self.text_color, fontsize=12, fontweight="bold", pad=12)
 
@@ -293,7 +292,7 @@ class MainWindow(QMainWindow):
         #загружаем пациентов из файла json
         self.patients = load_patients()
         if not self.patients:
-            self.patients = generate_patients(30)
+            self.patients = generate_patients(600)
             save_patients(self.patients)
         self.refresh_table()
 
